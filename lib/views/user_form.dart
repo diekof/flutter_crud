@@ -16,7 +16,7 @@ class _UserFormState extends State<UserForm> {
   final Map<String,String> _formData = {};
 
   void _loadFormData(User user){
-    if (user != null)  {
+    if (user.id != null)  {
       _formData['id'] = user.id.toString();
       _formData['name'] = user.name;
       _formData['email'] = user.email;
@@ -33,6 +33,7 @@ class _UserFormState extends State<UserForm> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         title: Text('Formulário de Usuários'),
